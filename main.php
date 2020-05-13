@@ -24,9 +24,6 @@ if (($json = valid()) == false) {
     case '/help@Mrlongbot':
       $ANSWER = "Добро пожаловать в раздел справки. Просто тыкай */excuse* чтобы получить отмазки.";
     break;
-    // case ($text=='/admin' and $uid == '283245299'):
-    //   $ANSWER = 'Здравствуй, администратор!';
-    // break;
     case '/hi':
     case '/hi@Mrlongbot':
       $ANSWER = $phrases_hi[$rand_phrases_hi].$first_name;
