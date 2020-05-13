@@ -1,2 +1,2 @@
 # excuse-telegram-bot
-FIrst telegram bot w/ excuses. php/ no sql
+FIrst telegram bot for excuses. php/ no sql
