@@ -15,29 +15,26 @@ if (($json = valid()) == false) {
 }
   $uid = $json['message']['from']['id'];
   $first_name = $json['message']['from']['first_name'];
-//   $username = $json['message']['from']['username'];
   $chat_id = $json['message']['chat']['id'];
   $text = $json['message']['text'];
 
-  switch($text){      
+  switch($text){
     case '/help':
     case '/help@Mrlongbot':
       $ANSWER = "Добро пожаловать в раздел справки. Просто тыкай */excuse* чтобы получить отмазки.";
     break;
-    // case ($text=='/admin' and $uid == '283245299'):
-    //   $ANSWER = 'Здравствуй, администратор!';
-    // break;
     case '/hi':
     case '/hi@Mrlongbot':
       $ANSWER = $phrases_hi[$rand_phrases_hi].$first_name;
-    break;  
+    break;
     case '/excuse':
     case '/excuse@Mrlongbot':
+    case 'Хочу отмазку':
       $ANSWER = $phrases_one[$rand_phrases_one];
       sendMessage($chat_id,$ANSWER);
       sleep(1);
       $ANSWER = $excuses[$rand_excuses];
-    break;    
+    break;
     case '/start':
     case '/start@Mrlongbot':
         $ANSWER = 'Привет!
